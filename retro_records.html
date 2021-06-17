@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="stylesRecords2.css">
+
+    <title>RETRO RECORDS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script rel="stylesheet" src="https://kit.fontawesome.com/02cd875fbf.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="wrapper">
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa fa-record-vinyl"></i>
+            </label>
+    
+            <label class="logo"><a href="index.html#home"><img src="images/retroRecordsNewtown_logo.png" width="120"
+                        height="50" alt="retroRecordsNewtown_logo" title="header-image"></a></label>
+            <ul id="nav_ul">
+                <li><a href="index.html#home">HOME</a></li>
+                <li><a class="active" href="retro_records.html#retro_records">RETRO RECORDS</a></li>
+                <li>
+          <a href="index.php">BUY RECORDS</a>
+        </li>
+        <li><a href="contact_us.html#contact_us">CONTACT US</a></li>
+        <li>
+          <a href="checkout.php">CHECKOUT</a>
+        </li>
+        <li>
+          <a href="cart.php"><i class="fas fa-shopping-cart"></i> <span id="cart-item" class="badge badge-danger"></span></a>
+        </li>
+                
+    
+            </ul>
+    
+            
+        </nav>
+    </header>
+
+    <main>
+        <div id="slider">
+            <figure>
+                <img src="images/amps.png">
+                <img src="images/guitar.png">
+                <img src="images/drums.png">
+                <img src="images/amps.png">
+                <img src="images/guitar.png">
+            </figure>
+        </div>
+
+        <div class="content">
+        <img class="img-banner" src="images/record-store2.jpeg" alt="record-store2" title="record-store2">
+        <article class="home">
+            <h2>Ask Our Staff</h2>
+            <p>If you can't find the album you were looking for, don't worry, ask one of our friendly staff and they might be able to help,
+                they are also crazy about music and love to chat about it, so feel free to debate on which music style is better on vinil or
+                if rock and roll has really died.</p>
+            <h2>Just follow the Alphabet</h2>
+            <p>At Retro Records we are proud to say that our organization is what makes us stand out from the crowd, everything is exactly where is supposed to be,
+                everything is sorted by music style and alphabet.</p>
+
+        </article>
+
+
+    </div>
+
+    <div class="content">
+        
+        <article class="home">
+            <h2>New Arrivals</h2>
+            <p>We receive brand new as well as second hand classics every week, so if you could not find what you were looking for, pop by 
+                next week, there is a high chance that dream album will magically land in our collection.</p>
+            <h2>We Buy your old Vinil Discs</h2>
+            <p>If you or somebody you know grew tired of listening to their old vinils and are now 100% digitilized, just 
+                bring your unwanted LPs that we will sure be able to re-home them and pay you a fair price for them.</p>
+
+        </article>
+        <img class="img-banner" src="images/record-store1.jpeg" alt="record-store1" title="record-store1">
+
+    </div>
+
+
+    </main>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js'></script>
+  
+    <script type="text/javascript">
+    $(document).ready(function() {
+  
+      // Change the item quantity
+      $(".itemQty").on('change', function() {
+        var $el = $(this).closest('tr');
+  
+        var pid = $el.find(".pid").val();
+        var pprice = $el.find(".pprice").val();
+        var qty = $el.find(".itemQty").val();
+        location.reload(true);
+        $.ajax({
+          url: 'action.php',
+          method: 'post',
+          cache: false,
+          data: {
+            qty: qty,
+            pid: pid,
+            pprice: pprice
+          },
+          success: function(response) {
+            console.log(response);
+          }
+        });
+      });
+  
+      // Load total no.of items added in the cart and display in the navbar
+      load_cart_item_number();
+  
+      function load_cart_item_number() {
+        $.ajax({
+          url: 'action.php',
+          method: 'get',
+          data: {
+            cartItem: "cart_item"
+          },
+          success: function(response) {
+            $("#cart-item").html(response);
+          }
+        });
+      }
+    });
+    </script>
+
+    <footer>
+        <ul class="footer-container">
+            <li>
+                <p>© Retro Records Newtown Pty Limited 2021</p>
+            </li>
+            <li><a href="#facebook"><img src="images/facebook_small.png" alt="facebook" title="facebook"></a></li>
+            <li><a href="#twitter"><img src="images/twitter_small.png" alt="twitter" title="twitter"></a></li>
+            <li><a href="#youtube"><img src="images/youtube-variation_small.png" alt="youtube" title="youtube"></a></li>
+            <li>
+                <p>All Rights Reserved. info@retrorecordsnewtown.com.au </p>
+            </li>
+        </ul>
+    </footer>
+</div>
+</body>
+
+</html>

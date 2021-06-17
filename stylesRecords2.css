@@ -1,0 +1,793 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Raleway&display=swap);
+
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  
+}
+
+
+body{
+  font-family: 'Raleway';
+  background-image: url("images/body_bg.png");
+}
+
+h2{
+  font-size: 40px;
+  max-width: 800px;
+}
+
+.wrapper{
+max-width: 992px;
+margin: auto;
+}
+
+label.logo{
+  padding-left: 10px;
+  width: 100%;
+}
+
+nav{
+  background: #FBFBFB;
+  width: 100%;
+  padding: 10px 0;
+}
+
+nav ul{
+float: right;
+margin-right: 20px;
+}
+
+nav ul li{
+  display: inline-block;
+  line-height: 50px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: black;
+  font-size: 15px;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+
+#nav_ul-buy-records{
+  margin-top: -55px;
+}
+
+a.active, a:hover{
+  background: grey;
+  transition: .5s;
+}
+
+.checkbtn{
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 50px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check{
+  display: none;
+}
+
+.footer-container{
+  background: #FBFBFB;
+  display: flex;
+  float: right;
+  width: 100%;
+  padding: 10px;
+}
+
+footer ul li a {
+  color: black;
+  font-size: 15px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 3px;
+
+}
+footer ul li a img {
+  width: 25px;
+  height: 25px;
+}
+main .content{
+  display: flex;
+  background-color: white;
+}
+
+main .form-content{
+  display: flex;
+  background-color: white;
+}
+.img-banner{
+  object-fit: cover;
+}
+
+main .content img{
+  width: 50%;
+  padding: 10px;
+}
+
+main .form-content img{
+  width: 50%;
+  padding: 10px;
+}
+
+.home{
+  width: 50%;
+  padding: 20px;
+  padding-top: 70px;
+}
+
+h2{
+  padding: 20px 0;
+}
+
+/* slider */
+
+
+#slider {
+  width: 100%;
+overflow: hidden;
+}
+#slider figure {
+position: relative;
+width: 500%;
+margin: 0;
+left: 0;
+animation: 20s slider infinite;
+}
+#slider figure img {
+width: 20%;
+float: left;
+}
+
+@keyframes slider {
+0% {
+left: 0;
+}
+20% {
+left: 0;
+}
+25% {
+left: -100%;
+}
+45% {
+left: -100%;
+}
+50% {
+left: -200%;
+}
+70% {
+left: -200%;
+}
+75% {
+left: -300%;
+}
+95% {
+left: -300%;
+}
+100% {
+left: -400%;
+}
+}
+
+/* slider */
+
+/* Form */
+
+
+.submit{
+  margin-left: 120px;
+  width: 120px;
+  height: 30px;
+  border-radius: 2px;
+  margin-top: 30px;
+  font-weight: bold; 
+}
+
+.form-box{
+  width: 350px;
+  height: 360px;
+  background-color: brown;
+  border-radius: 10px;
+  margin: 40px;
+}
+#form_h2{
+  text-align: center;
+}
+
+.contact label{
+  display: inline-block;
+  width: 110px;
+  text-align: right;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+input{
+  margin: 5px;
+}
+
+.contact{
+  width: 50%;
+  
+}
+
+.table-content{
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+}
+
+.col-1{
+  width: 50%;
+  margin: 20px;
+  padding: 20px;
+}
+
+.col-2{
+  width: 50%;
+  margin: 20px;
+  padding: 20px;
+}
+
+
+/* Form */
+
+h1{
+  text-align: center;
+}
+
+.find-us{
+  width: 50%;
+  padding: 20px;
+  margin: 40px;
+}
+
+/* table */
+table{
+  width: 100%;
+  table-layout: fixed;
+  border-radius: 20px;
+  background-color: white;
+  color: white;
+  
+  
+}
+
+.table-used{
+  background-color: #2168AC;
+}
+
+.cover{
+  margin: 2px;
+}
+
+table, th, td {
+  border: 2px solid white;
+  border-collapse: collapse;
+  border-top: 0;
+  border-left: 0;
+}
+
+table, td{
+  border-right: 0;
+}
+
+.info-border {
+  border-right: 0;
+}
+
+.btm {
+  border-bottom: hidden;
+}
+
+td {
+  padding: 5px;
+  width: 90px;
+}
+
+th {
+  padding: 5px;
+  text-align: center;
+  width: 90px;
+}
+
+/* table */
+
+.rare-lps{
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  padding: 0 200px;
+}
+
+/* Forum */
+.forum-content{
+  background-color: white;
+  padding: 0 28%;
+  width: 100%;
+  display: flex;
+  
+}
+
+.forum{
+  width: 350px;
+  height: 360px;
+  background-color: white;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: grey solid;
+  border-radius: 10px;
+  margin: 40px;
+  padding: 50px;
+  color: black;
+}
+
+.forum label{
+  padding-left: 30px;
+  margin-top: 100px;
+}
+.forum h1{
+  padding-bottom: 40px;
+}
+
+.forum button{
+    margin-left: 60px;
+    width: 120px;
+    height: 30px;
+    border-radius: 2px;
+    margin-top: 30px;
+    font-weight: bold; 
+
+}
+
+/* Category */
+.category-list-content{
+  width: 100%;
+  background-color: white;
+  padding-left: 20%;
+}
+
+.category-list{
+  width: 70%;
+  color: black;
+  padding-top: 50px;
+}
+
+.category-list strong{
+  color: black;
+}
+
+.category-list h1{
+  color: black;
+  margin-bottom: 50px;
+}
+
+.category-list button{
+  width: 200px;
+  height: 40px;
+  border-radius: 2px;
+  margin: 30px 12%;
+  font-weight: bold; 
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+}
+
+.catlist-buttons{
+  display: flex;
+}
+
+.button-1{
+  width: 50%;
+}
+.button-2{
+  width: 50%;
+}
+
+/* Topic */
+.add-topic-content{
+  background-color: white;
+  padding: 0 28%;
+  width: 100%;
+  display: flex;
+  
+}
+
+.add-topic{
+  width: 350px;
+  height: 510px;
+  background-color: white;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: grey solid;
+  border-radius: 10px;
+  margin: 40px;
+  padding: 50px;
+}
+
+.add-topic label{
+  padding-left: 30px;
+  margin-top: 100px;
+}
+
+.add-topic input{
+  width: 235px;
+}
+
+.add-topic textarea{
+  width: 235px;
+}
+
+
+.add-topic h1{
+  padding-bottom: 40px;
+}
+
+.add-topic button{
+    margin-left: 60px;
+    width: 120px;
+    height: 30px;
+    border-radius: 2px;
+    margin-top: 30px;
+    font-weight: bold; 
+}
+
+
+
+
+
+/* showtopic */
+
+.showtopic-list-content{
+  width: 100%;
+  background-color: white;
+  color: black;
+  padding: 50px 50px 50px 15%;
+}
+
+.showtopic-list{
+  width: 600px;
+  height: 800px;
+  background-color: white;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: grey solid;
+  border-radius: 10px;
+  margin: 40px;
+  padding: 50px;
+  color: black;
+}
+
+.showtopic-list table{
+  color: black;
+}
+
+.showtopic-list table tr td{
+  border: grey solid;
+}
+.showtopic-list table tr th{
+  border: grey solid;
+  background-color: grey;
+}
+
+
+/* reply to post */
+
+.replytopost-content{
+  width: 100%;
+  background-color: white;
+  color: black;
+  padding: 50px 50px 50px 25%;
+}
+
+.replytopost{
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: grey solid;
+  border-radius: 10px;
+  margin: 40px;
+  padding: 50px;
+  color: black;
+}
+
+/* buy records */
+.flex{
+ width: 992px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+
+}
+
+.thankYou h1{
+font-size: 20px;
+}
+
+.thankYouh2 h2{
+  font-size: 15px;
+}
+
+.hideThePopUp{
+  background-color: white;
+  padding-left: 38%;
+  font-size: 20px;
+}
+
+.albums{
+  width: 33.3%;
+  background-color: white;
+  color: black;
+  margin: 50px 0;;
+}
+
+.each-album{
+  width: 75%;
+  height: 420px;
+  background-color: white;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: grey solid;
+  border-radius: 10px;
+  padding: 20px;
+  color: black;
+  margin-left: 40px;
+}
+
+
+.checkout-page{
+  width: 33.3%;
+  background-color: white;
+  color: black;
+  margin: 50px 0;;
+}
+
+.each-checkout-page{
+  width: 100%;
+  height: 520px;
+  background-color: white;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: grey solid;
+  border-radius: 10px;
+  padding: 20px;
+  color: black;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.each-checkout-page input{
+  width: 250px;
+  height:30px;
+  background-color: white;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 5px;
+  color: black;
+}
+
+.each-checkout-page textarea{
+  width: 250px;
+  height:80px;
+  padding: 5px;
+  margin-left: 5px;
+}
+
+.each-album label{
+  font-weight: bold;
+background-color: black;
+color: white;
+padding: 0 20px;
+
+}
+
+.each-album p{
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.each-album img{
+  width: 200px;
+}
+
+.each-album-button{
+  width: 150px;
+  height: 40px;
+  font-weight: bold;
+  margin: 5px 0;
+  background-color: #2168AC;
+  color: white;
+  font-size: 18px;
+  margin-left: 25px;
+}
+
+
+.order-details table tr th{
+  color: black;
+  border: solid grey;
+}
+
+.order-details table tr td{
+  color: black;
+  border: solid grey;
+}
+
+.order-details{
+  background-color: white;
+  padding-bottom: 50px;
+}
+
+.order-details table {
+  background-color: white;
+  
+ 
+}
+
+
+
+
+@media (max-width: 768px){
+  label.logo{
+    padding-left: 0;
+    
+  }
+  nav ul li a{
+    font-size: 8px;
+    font-weight: bold;
+  }
+  footer ul li p {
+   display: none;
+  }
+  .footer-container{
+    background: #FBFBFB;
+    display: flex;
+    width: 100%;
+    padding: 10px 30%;
+  }
+  footer ul li a img {
+    width: 35px;
+    height: 35px;
+  }
+  main .content{
+    display: block;
+  }
+  main .content img{
+    width: 100%;
+  }
+
+  main .form-content{
+    display: block;
+  }
+  main .form-content img{
+    width: 100%;
+  }
+  
+  .home{
+    width: 100%;
+    padding: 0 20px 80px 20px;
+  }
+  .contact{
+    width: 100%;
+    padding-left: 16%;
+    padding-top: 20px;
+  }
+  .find-us{
+    width: 350px;
+    margin: 0 27% 50px 27%;
+  }
+ .content{
+   padding-bottom: 20px;
+ }
+
+ .form-content{
+  padding-bottom: 20px;
+}
+ .rare-lps{
+  padding: 0 100px;
+}
+.table-content{
+  display: block;
+  text-align: center;
+  padding: 5px 15% 5px 12%;
+}
+
+.col-1{
+  width: 100%;
+  margin: 6px;
+}
+
+.col-2{
+  width: 100%;
+  margin: 6px;
+}
+h2{
+  font-size: 5vmax;
+}
+.catlist-buttons{
+  display: block;
+}
+.button-1{
+  width: 100%;
+}
+.button-2{
+  width: 100%;
+}
+
+}
+
+@media (max-width: 576px){
+  label.logo{
+    padding-left: 50px;
+  }
+  .checkbtn{
+    display: block;
+  }
+  #nav_ul{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background: grey;
+    top: 74px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover, a.active{
+    background: none;
+    color: white;
+  }
+  #check:checked ~ #nav_ul{
+    left: 0;
+  }
+  .footer-container{
+    background: #FBFBFB;
+    display: block;
+    width: 100%;
+    padding: 10px 40%;
+  }
+  footer ul li a img {
+    width: 40px;
+    height: 40px;
+  }
+  .contact{
+    width: 100%;
+    padding: 0 12% 0 12%;
+    padding-top: 20px;
+  }
+  .find-us{
+    width: 300px;
+    margin: 0 20% 0 15%;
+    
+  }
+  form{
+    margin-right: 100%;
+  }
+  .form-box{
+    width: 300px;
+  }
+  .form-box label{
+    width: 85px;
+  }
+  .form-box .submit{
+    margin-left: 93px;
+  }
+
+}

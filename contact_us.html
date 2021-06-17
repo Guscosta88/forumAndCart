@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="stylesRecords2.css">
+
+    <title>RETRO RECORDS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script rel="stylesheet" src="https://kit.fontawesome.com/02cd875fbf.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="wrapper">
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa fa-record-vinyl"></i>
+            </label>
+    
+            <label class="logo"><a href="index.html#home"><img src="images/retroRecordsNewtown_logo.png" width="120"
+                        height="50" alt="retroRecordsNewtown_logo" title="header-image"></a></label>
+            <ul id="nav_ul">
+                <li><a href="index.html#home">HOME</a></li>
+                <li><a href="retro_records.html#retro_records">RETRO RECORDS</a></li>
+                <li>
+          <a href="index.php">BUY RECORDS</a>
+        </li>
+        <li><a class="active" href="contact_us.html#contact_us">CONTACT US</a></li>
+        <li>
+          <a href="checkout.php">CHECKOUT</a>
+        </li>
+        <li>
+          <a href="cart.php"><i class="fas fa-shopping-cart"></i> <span id="cart-item" class="badge badge-danger"></span></a>
+        </li>
+                
+    
+            </ul>
+    
+            
+        </nav>
+    </header>
+
+        <main>
+            <div id="slider">
+                <figure>
+                    <img src="images/amps.png">
+                    <img src="images/guitar.png">
+                    <img src="images/drums.png">
+                    <img src="images/amps.png">
+                    <img src="images/guitar.png">
+                </figure>
+            </div>
+
+            
+
+            <div class="form-content">
+                
+                    
+     <form method="post" class="contact_form" action="https://dev-guscakeshop.pantheonsite.io/sample-page/thankyou/">
+        <div class="contact">
+           
+     
+     <div class="form-box">
+        <h2 id="form_h2">Ask us!</h2><br>
+     <label class="form_label" for="name">Name:</label>
+     <input type="text" name="name" id="name" class="input" placeholder="Enter Your Name"></input><br>
+
+     <label class="form_label" for="email">Email:</label>
+     <input class="form_label" type="email" name="email" id="email" class="input" placeholder="Enter Your E-mail"></input><br>
+
+     <label class="form_label" for="artist">Artist:</label>
+     <input type="text" name="artist" id="artist" class="input" placeholder="Enter Your Artist"></input><br>
+
+     <label class="form_label" for="album">Album:</label>
+     <input type="text" name="album" id="album" class="input" placeholder="Enter Artist Album"></input><br>
+     <input type="submit" name="gusContactSubmit" class="submit" value="Submit">
+     </div>
+    </div>
+</form>
+
+
+                
+
+
+                <div class="find-us">
+                
+                <h2>FIND US</h2>
+                <p>We are located at the top of King Street, just near the Marly Hotel.</p>
+                <h2>GET IN TOUCH</h2>
+                <p>Phone: 02 9519 1234</p>
+                <p>E-mail: info@retrorecordsnewtown.com.au</p>
+            </div>
+
+            
+
+
+
+    </div>
+    </main>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js'></script>
+  
+    <script type="text/javascript">
+    $(document).ready(function() {
+  
+      // Change the item quantity
+      $(".itemQty").on('change', function() {
+        var $el = $(this).closest('tr');
+  
+        var pid = $el.find(".pid").val();
+        var pprice = $el.find(".pprice").val();
+        var qty = $el.find(".itemQty").val();
+        location.reload(true);
+        $.ajax({
+          url: 'action.php',
+          method: 'post',
+          cache: false,
+          data: {
+            qty: qty,
+            pid: pid,
+            pprice: pprice
+          },
+          success: function(response) {
+            console.log(response);
+          }
+        });
+      });
+  
+      // Load total no.of items added in the cart and display in the navbar
+      load_cart_item_number();
+  
+      function load_cart_item_number() {
+        $.ajax({
+          url: 'action.php',
+          method: 'get',
+          data: {
+            cartItem: "cart_item"
+          },
+          success: function(response) {
+            $("#cart-item").html(response);
+          }
+        });
+      }
+    });
+    </script>
+
+    <footer>
+        <ul class="footer-container">
+            <li>
+                <p>© Retro Records Newtown Pty Limited 2021</p>
+            </li>
+            <li><a href="#facebook"><img src="images/facebook_small.png" alt="facebook" title="facebook"></a></li>
+            <li><a href="#twitter"><img src="images/twitter_small.png" alt="twitter" title="twitter"></a></li>
+            <li><a href="#youtube"><img src="images/youtube-variation_small.png" alt="youtube" title="youtube"></a></li>
+            <li>
+                <p>All Rights Reserved. info@retrorecordsnewtown.com.au </p>
+            </li>
+        </ul>
+    </footer>
+    </div>
+</body>
+
+</html>
